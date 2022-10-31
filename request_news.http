@@ -21,7 +21,7 @@ DELETE http://localhost:3000/news
 GET http://localhost:3000/news/1
 
 ### 
-PUT http://localhost:3000/news/2
+PUT http://localhost:3000/news/12
 Content-Type: application/json
 
 {
@@ -31,4 +31,4 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3000/news/1
 
-ДЗ: Добавить логгер, который фиксирует на какой метод был запрос и с какого ip был запрос
+

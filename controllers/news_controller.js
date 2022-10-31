@@ -5,6 +5,7 @@ import {
   find_one,
   update_one,
 } from "../models/news.js";
+
 export const findAllNewsMiddleware = (req, res, next) => {
   find_all()
     .then((data) => {
@@ -70,6 +71,12 @@ export const getNewsByIdMiddleware = (req, res, next) => {
 export const updateNewsByIdMiddleware = (req, res, next) => {
   update_one(req.params.id, req.body)
     .then((data) => {
+      if (data.affectedRows == 0) {
+        return res.json({
+          error: true,
+          message: "Новость не найдена",
+        });
+      }
       next();
     })
     .catch((err) => {
