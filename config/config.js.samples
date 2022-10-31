@@ -1,0 +1,11 @@
+const config = {
+  PORT: 3000,
+  DB: {
+    PORT: 3306,
+    HOST: "localhost",
+    USER: "user",
+    PASSWORD: "password",
+    DATABASE: "dbname",
+  },
+};
+export default config;
